@@ -21,7 +21,7 @@ const Display = styled.h1`
 `;
 
 const items = "Who are you without the doing?".split(" ");
-const config = { mass: 1, tension: 220, friction: 100 };
+const mountConfig = { mass: 1, tension: 220, friction: 130 };
 const hoverConfig = { mass: 1, tension: 550, friction: 100 };
 
 const IndexPage = ({ location }) => {
@@ -40,36 +40,21 @@ const IndexPage = ({ location }) => {
 };
 
 const Word = ({ children, index }) => {
-  const [done, setDone] = useState(false);
-  const [pointerOver, setPointerOver] = useState(false);
-  const pointerStyles = pointerOver ? { fontWeight: 100 } : {};
-
   const [props, set] = useSpring(() => ({
     fontWeight: 100
   }));
 
   set({
-    from: { fontWeight: 100 },
-    to: { fontWeight: 700 },
-    delay: 120 * index,
-    config,
-    onFrame: fr => {
-      if (fr.fontWeight > 500) {
-        setDone(true);
-      }
-    }
+    fontWeight: 700,
+    delay: 160 * index,
+    config: mountConfig
   });
-
-  // const transitionStyles = done ? { transition: "all 0.4s ease" } : {};
 
   return (
     <animated.span
       onPointerEnter={() => set({ fontWeight: 100, config: hoverConfig })}
-      onPointerLeave={() => set({ fontWeight: 700 })}
-      style={{
-        ...props,
-        ...pointerStyles
-      }}
+      onPointerLeave={() => set({ fontWeight: 700, config: hoverConfig })}
+      style={{ ...props, willChange: "font-weight" }}
     >
       {index === items.length - 1 ? <em>{children}</em> : `${children} `}
     </animated.span>
