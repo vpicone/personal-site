@@ -1,0 +1,60 @@
+{
+  "name": "cloudsnap",
+  "private": true,
+  "description": "Connect your apps in a snap. The premier iPaaS solution built for the connected enterprise",
+  "version": "0.1.0",
+  "author": "Vince Picone <vp@vincepic.one>",
+  "dependencies": {
+    "@carbon/elements": "0.0.1-alpha.32",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.1.18",
+    "gatsby-image": "^2.0.30",
+    "gatsby-plugin-google-analytics": "^2.0.14",
+    "gatsby-plugin-manifest": "^2.0.19",
+    "gatsby-plugin-netlify": "^2.0.11",
+    "gatsby-plugin-netlify-cms": "^3.0.12",
+    "gatsby-plugin-offline": "^2.0.24",
+    "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-sharp": "^2.0.22",
+    "gatsby-plugin-sitemap": "^2.0.6",
+    "gatsby-plugin-styled-components": "^3.0.6",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-remark": "^2.2.6",
+    "gatsby-transformer-sharp": "^2.1.14",
+    "netlify-cms": "^2.4.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-helmet": "^5.2.0",
+    "react-spring": "^8.0.8",
+    "sanitize.css": "^8.0.0",
+    "styled-components": "^4.1.3"
+  },
+  "keywords": [
+    "Cloudsnap"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-eslint": "^2.0.4"
+  }
+}
