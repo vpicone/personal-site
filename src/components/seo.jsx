@@ -60,7 +60,22 @@ function SEO({ description = "", lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <link
+              rel="preload"
+              href="../fonts/roman.woff2"
+              as="font"
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              href="../fonts/italic.woff2"
+              as="font"
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+          </Helmet>
         );
       }}
     />
