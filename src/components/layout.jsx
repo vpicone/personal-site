@@ -16,7 +16,7 @@ const MainLayout = styled.div`
   padding-top: ${props => (props.home ? "0" : "120px")};
   justify-content: ${props => (props.home ? "center" : "flex-start")};
   align-items: center;
-  background: ${props => (props.home ? "transparent" : "white")};
+  background: ${props => (props.home ? "transparent" : "#F5F7FA")};
   @media (max-width: 600px) {
     padding-bottom: ${props => (props.home ? "20vh" : 0)};
     padding-top: ${props => (props.home ? "0" : "90px")};

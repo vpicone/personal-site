@@ -15,7 +15,7 @@ const NavContainer = styled.nav`
   width: 100vw;
   left: 0;
   top: 0;
-  background: ${props => (props.home ? "transparent" : "white")};
+  background: ${props => (props.home ? "transparent" : "#F5F7FA")};
 `;
 
 const LinkList = styled.ul`
@@ -41,7 +41,7 @@ const LinkList = styled.ul`
 `;
 
 const ListItem = styled.li`
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #f5f7fa;
   margin: ${props => props.theme.spacing[6]} 0;
   font-size: ${props => props.theme.typeScale[5]}px;
   font-variation-settings: var(--light-condensed);

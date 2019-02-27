@@ -8,7 +8,7 @@ const BlogContainer = styled.div`
   padding: ${props => props.theme.spacing[6]};
   padding-left: 0;
   padding-right: 0;
-  background: white;
+  background: #f5f7fa;
   align-items: center;
   ul {
     list-style: none;
