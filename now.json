@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "personal-site",
+  "alias": "vpp-personal-site",
   "builds": [
     {
       "src": "package.json",
