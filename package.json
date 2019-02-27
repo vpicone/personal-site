@@ -2,7 +2,7 @@
   "name": "vincepic.one",
   "private": true,
   "description": "Vince is a web developer at IBM beautiful Austin, TX. His passion is design systems, front-end architecture and new web technologies.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Vince Picone <vp@vincepic.one>",
   "dependencies": {
     "@carbon/elements": "0.0.1-alpha.32",
