@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Vince Picone – Web Developer`,
+    title: `Vince Picone`,
     description: `Vince is a web developer at IBM beautiful Austin, TX. His passion is design systems, front-end architecture and new web technologies.`,
     author: `@vincepicone`,
     siteUrl: `https://vincepic.one`
