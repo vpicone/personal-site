@@ -5,11 +5,12 @@ import styled from "styled-components";
 const LinkContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: ${props => props.theme.typeScale[4]}px;
   width: 100%;
   a {
     font-family: inherit;
     color: inherit;
-    padding-top: ${props => props.theme.spacing[3]};
+    padding-top: ${props => props.theme.spacing[2]};
   }
 
   .next,
@@ -29,6 +30,7 @@ const LinkContainer = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: ${props => props.theme.spacing[2]};
   }
 
   @media (max-width: 600px) {
@@ -84,7 +86,7 @@ const LabelContainer = styled.div`
 
 const Links = ({ previous = {}, next = {} }) => {
   return (
-    <nav>
+    <nav style={{ width: "600px" }}>
       <LabelContainer>
         {previous.slug && (
           <Link to={`/posts/${previous.slug}`}>
@@ -112,7 +114,7 @@ const Links = ({ previous = {}, next = {} }) => {
           </Link>
         )}
         {!next.slug ? (
-          <span>
+          <span className={`next disabled`}>
             <em>Coming soon</em>
           </span>
         ) : (

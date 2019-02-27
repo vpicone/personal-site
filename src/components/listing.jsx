@@ -4,9 +4,17 @@ import styled from "styled-components";
 
 const Post = styled.article`
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
-  padding: 1rem;
+  padding: ${props => props.theme.spacing[7]};
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: ${props => props.theme.spacing[7]};
+  width: 650px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: ${props => props.theme.spacing[1]};
+    a {
+      text-decoration: none;
+    }
+  }
   a {
     color: inherit;
   }
@@ -20,8 +28,8 @@ const LISTING_QUERY = graphql`
   query LISTING_QUERY {
     allMarkdownRemark(
       limit: 10
-    ) # sort: { order: ASC, fields: [frontmatter___date] }
-    {
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt
@@ -45,9 +53,11 @@ const Listing = () => {
         allMarkdownRemark.edges.map(({ node }) => (
           <Post key={node.frontmatter.slug}>
             <h2>
-              {node.frontmatter.title} — {node.frontmatter.subtitle}
+              <Link to={`/posts/${node.frontmatter.slug}`}>
+                {node.frontmatter.title} — {node.frontmatter.subtitle}
+              </Link>
             </h2>
-            <p>{node.frontmatter.date}</p>
+            <time>{node.frontmatter.date}</time>
             <p>{node.excerpt}</p>
             <Link to={`/posts/${node.frontmatter.slug}`}>Read More</Link>
           </Post>
