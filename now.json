@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "personal-site",
-  "alias": "vpp-personal-site",
+  "name": "vincepicone",
+  "alias": "vincepic.one",
   "builds": [
     {
       "src": "package.json",
