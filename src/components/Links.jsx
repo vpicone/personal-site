@@ -86,7 +86,7 @@ const LabelContainer = styled.div`
 
 const Links = ({ previous = {}, next = {} }) => {
   return (
-    <nav style={{ width: "600px" }}>
+    <nav style={{ width: "600px", maxWidth: "85vw" }}>
       <LabelContainer>
         {previous.slug && (
           <Link to={`/posts/${previous.slug}`}>
