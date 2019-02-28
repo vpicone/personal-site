@@ -6,6 +6,14 @@ module.exports = {
     siteUrl: `https://vincepic.one`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        custom: {
+          families: [`Plex`]
+        }
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
@@ -45,7 +53,6 @@ module.exports = {
         path: `${__dirname}/src/posts`
       }
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap` // only generated on build
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
