@@ -55,6 +55,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   min-height: 100vh;
+  font-weight: 300;
   background: linear-gradient(rgb(255, 107, 124), #fb4b53);
 }
 
