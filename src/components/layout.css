@@ -52,6 +52,7 @@ html {
 
 body {
   font-family: Plex, system-ui, sans-serif;
+  color: #272727;
   font-style: normal;
   line-height: 1.5;
   min-height: 100vh;
