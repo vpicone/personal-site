@@ -3,16 +3,16 @@ module.exports = {
     title: `Vince Picone`,
     description: `Vince is a web developer at IBM beautiful Austin, TX. His passion is design systems, front-end architecture and new web technologies.`,
     author: `@vincepicone`,
-    siteUrl: `https://vincepic.one`
+    siteUrl: `https://vincepic.one`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         custom: {
-          families: [`Plex`]
-        }
-      }
+          families: [`Plex`],
+        },
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -20,15 +20,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-77141894-3`
-      }
+        trackingId: `UA-77141894-3`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -43,18 +43,18 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
         include_favicon: true,
-        lang: `en-US`
-      }
+        lang: `en-US`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`
-      }
+        path: `${__dirname}/src/posts`,
+      },
     },
-    `gatsby-plugin-sitemap` // only generated on build
+    `gatsby-plugin-sitemap`, // only generated on build
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-  ]
+  ],
 };

@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -35,15 +35,15 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(edge => {
-        const slug = edge.node.frontmatter.slug;
+        const { slug } = edge.node.frontmatter;
         createPage({
           path: `/posts/${slug}`,
-          component: path.resolve("./src/components/postLayout.jsx"),
+          component: path.resolve('./src/components/postLayout.jsx'),
           context: {
             slug,
             previous: edge.previous ? edge.previous.frontmatter : {},
-            next: edge.next ? edge.next.frontmatter : {}
-          }
+            next: edge.next ? edge.next.frontmatter : {},
+          },
         });
       });
       resolve();

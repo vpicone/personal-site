@@ -5,17 +5,22 @@
  */
 
 // You can delete this file if you're not using it
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import { g100, spacing, breakpoints, scale } from "@carbon/elements/es";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import { g100, spacing, breakpoints, scale } from '@carbon/elements/es';
 
 const theme = {
   colors: g100,
   spacing,
   breakpoints,
-  typeScale: scale
+  typeScale: scale,
 };
 
-export const wrapRootElement = ({ element }) => {
-  return <ThemeProvider theme={theme}>{element}</ThemeProvider>;
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>{element}</ThemeProvider>
+);
+
+wrapRootElement.propTypes = {
+  element: PropTypes.node,
 };
